@@ -1,8 +1,7 @@
-export default function blogPage({ params }) {
+import BlogDetails from "@/components/Blog/BlogDetails";
+
+export default function blogPage({ params }: { params: { blogId: Number } }) {
     return (
-        <div>
-            <h1> Blog Titel</h1>
-            This is blog details page for blog Id {params.blogId}
-        </div>
+        <BlogDetails blogId={params.blogId} />
     )
 }

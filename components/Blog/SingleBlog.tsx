@@ -16,7 +16,7 @@ const SingleBlog = ({blog}: {blog: Blog}) => {
     }
   return (
     <Card 
-    className="w-[80%]"
+    className="h-32"
     isPressable
     onPress={viewBlog}
     >
@@ -26,7 +26,7 @@ const SingleBlog = ({blog}: {blog: Blog}) => {
         </div>
       </CardHeader>
       <CardBody>
-      <p className="text-small text-default-500">{blog.body}</p>
+      <p className="text-small text-default-500 truncate">{blog.body}</p>
       </CardBody>
     </Card>
   );
