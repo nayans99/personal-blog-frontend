@@ -9,7 +9,7 @@ const BlogDetails = ({blogId}: {blogId: Number}) => {
     useEffect(() => {
         const getBlog = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:5000/blog/' + blogId);
+                const response = await fetch(process.env.NEXT_PUBLIC_CRUD_ENDPOINT+'blog/' + blogId);
                 const data = await response.json();
                 // Assuming data is an array, you can destructure it and create a Blog object
                 const [id, title, body, timestampString] = data["blog"];

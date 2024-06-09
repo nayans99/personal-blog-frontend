@@ -12,7 +12,7 @@ const NewBlog = () => {
         e.preventDefault();
         try {
             // Assuming you have an API endpoint for creating new blog posts
-            const response = await fetch('http://127.0.0.1:5000/blog/create', {
+            const response = await fetch(process.env.NEXT_PUBLIC_CRUD_ENDPOINT+'blog/create', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
